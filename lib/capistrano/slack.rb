@@ -10,9 +10,9 @@ module Capistrano
       def payload(announcement)
       {
         'channel' => fetch(:slack_room),
-        'username' => fetch(:slack_username, ''),
+        'username' => fetch(:slack_username, 'crushbot'),
         'text' => announcement,
-        'icon_emoji' => fetch(:slack_emoji, '')
+        'icon_emoji' => fetch(:slack_emoji, 'http://www.gravatar.com/avatar/39293a628644a33d2373c9c329330d49.png')
         }.to_json
       end
 
